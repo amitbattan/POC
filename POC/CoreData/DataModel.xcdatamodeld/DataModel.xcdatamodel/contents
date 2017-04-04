@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Item" representedClassName="Item" syncable="YES">
+        <attribute name="condition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="disPlayLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFeatured" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSold" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemThumbnailURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="searchKey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchKey" inverseName="item" inverseEntity="SearchKey" syncable="YES"/>
+    </entity>
+    <entity name="SearchKey" representedClassName="SearchKey" syncable="YES">
+        <attribute name="searchKey" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="item" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Item" inverseName="searchKey" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="240"/>
+        <element name="SearchKey" positionX="187" positionY="-27" width="128" height="75"/>
+    </elements>
+</model>
