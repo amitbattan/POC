@@ -38,6 +38,7 @@ Delegate approach is used in ListingViewModel.swift to notify viewcontroller any
 - request type : GET
 
 Query Parameter
+
 | Nombre | Tipo | Descripción |
 | ------ | ------ | ------ |
 | location | string | For this exercise use www.olx.com.ar |
