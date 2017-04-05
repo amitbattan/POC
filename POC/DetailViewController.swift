@@ -40,10 +40,4 @@ class DetailViewController: UIViewController {
         featuredImageView.isHidden = !item.isFeatured
     }
     
-//    override func viewWillLayoutSubviews() {
-//        titleLabel.preferredMaxLayoutWidth  = titleLabel.bounds.width
-//        locationLabel.preferredMaxLayoutWidth  = locationLabel.bounds.width
-//        descLabel.preferredMaxLayoutWidth  = descLabel.bounds.width
-//    }
-
 }
