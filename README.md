@@ -4,7 +4,7 @@
 - MVVM 
 - Swift 3
 - Core Data
-- Autolayout (with Size Classes / Vary Traits )
+- Adaptive layout
 - Unit Test for view model
 - Pagination
 - Custom delegates 
