@@ -37,6 +37,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
         tableView.addSubview(refreshControl)
     }
     
+    //pull to refresh
     func refresh(sender:AnyObject) {
         viewModel.refresh()
     }
@@ -48,6 +49,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
         }
     }
     
+    //toggle UI
     func resetSearchBar() {
         searchBar.searchBarStyle = .minimal
         searchBar.resignFirstResponder()
@@ -58,6 +60,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
         tableView.alpha = 0.0
     }
     
+    //toggle UI
     func setSearchBarForSearch() {
         tableView.contentInset = UIEdgeInsets.zero
         searchBar.searchBarStyle = .default
@@ -69,11 +72,13 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        //toggle UI
         resetSearchBar()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         UIView.animate(withDuration: 2.0) {
+            //toggle UI
             self.setSearchBarForSearch()
         }
     }
@@ -83,10 +88,12 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
             searchBar.resignFirstResponder()
             isPagination = true //set true to show loader
             tableView.reloadData()
+            //Call for getting items respective to search text
             viewModel.fetchItems(queryString: searchBarText)
         }
     }
     
+    //Call when need to update UI when some data to be show or some error message to be show
     func listFetched(isNextPage: Bool, errorMessage: String?) {
         refreshControl.endRefreshing()
         self.errorMessage = errorMessage
@@ -99,7 +106,8 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
         tableView.reloadData()
 
     }
-    
+
+    //Call when no data is available
     func endOfList() {
         isError = false
         isPagination = false
@@ -117,20 +125,23 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        if isPagination == true, indexPath.row == viewModel.items.count-4 {
+        if isPagination == true, indexPath.row == viewModel.items.count-3 {
+            //Call next page API
             viewModel.fetchNextPage()
         }
 
         if indexPath.row == viewModel.items.count {
             if isError == true {
+                //Show Error
                 let cell:MessageCell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessageCell
                 cell.configureCell(message: self.errorMessage ?? "Something went wrong, tab to retry")
                 return cell
             } else {
-                let cell:LoaderCell = tableView.dequeueReusableCell(withIdentifier: "LoaderCell", for: indexPath) as! LoaderCell
-                return cell
+                //Show Loader
+                return tableView.dequeueReusableCell(withIdentifier: "LoaderCell", for: indexPath)
             }
         } else {
+            //Show Item
             let item = viewModel.items[indexPath.row]
             let cell:ItemCell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
             cell.configureCell(item: item)
@@ -149,11 +160,13 @@ class ListViewController: UIViewController, UISearchBarDelegate, ListingViewMode
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.items.count {
             if isError == true {
+                //Retry web service call
                 viewModel.retry()
                 isError = false
                 tableView.reloadRows(at: [indexPath], with: .bottom)
             }
         } else {
+            //Go to detail view controller
             let item = viewModel.items[indexPath.row]
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let controller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {

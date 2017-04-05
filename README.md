@@ -31,6 +31,7 @@ Delegate approach is used in ListingViewModel.swift to notify viewcontroller any
 - Fine-tune UI
 - Further improvement in local storage (coredata)
 - Some other edge cases
+- Increase test case coverage
 
 ### API Detail
 

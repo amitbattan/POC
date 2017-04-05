@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="480" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8te-A0-s1f" id="0C2-nA-VL5">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="112.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="adI-JJ-fF4">
@@ -42,7 +41,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcQ-9Z-2H2">
-                                                    <rect key="frame" x="112" y="16" width="158" height="21"/>
+                                                    <rect key="frame" x="112" y="16" width="318" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -54,22 +53,22 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yj-x5-jTc">
-                                                    <rect key="frame" x="259" y="40" width="45" height="21"/>
+                                                    <rect key="frame" x="419" y="40" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vp-eA-xHJ">
-                                                    <rect key="frame" x="259" y="61" width="45" height="21"/>
+                                                    <rect key="frame" x="419" y="61" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="featured" translatesAutoresizingMaskIntoConstraints="NO" id="vZT-6q-H9n">
-                                                    <rect key="frame" x="280" y="16" width="24" height="24"/>
+                                                    <rect key="frame" x="440" y="16" width="24" height="24"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lft-DW-rKA">
-                                                    <rect key="frame" x="112" y="75" width="137" height="21"/>
+                                                    <rect key="frame" x="112" y="75" width="297" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -113,11 +112,11 @@
                                         <rect key="frame" x="0.0" y="141" width="480" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QyS-5l-0PL" id="RII-wG-lTx">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error-msg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0K-lH-jRs">
-                                                    <rect key="frame" x="122" y="16" width="77" height="24"/>
+                                                    <rect key="frame" x="201.5" y="16" width="77" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -134,15 +133,15 @@
                                             <outlet property="msgLabel" destination="d0K-lH-jRs" id="uF2-ra-nbe"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoaderCell" rowHeight="44" id="9UT-VB-RMs" customClass="LoaderCell" customModule="POC" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoaderCell" rowHeight="44" id="9UT-VB-RMs">
                                         <rect key="frame" x="0.0" y="198" width="480" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9UT-VB-RMs" id="300-dd-4co">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-Nl-ZQk">
-                                                    <rect key="frame" x="150" y="16" width="20" height="11"/>
+                                                    <rect key="frame" x="230" y="16" width="20" height="11"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
@@ -152,9 +151,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="mLz-Nl-ZQk" secondAttribute="bottom" constant="16" id="wbC-Y8-9GR"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="activityIndicator" destination="mLz-Nl-ZQk" id="l5S-3z-Xrq"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -286,14 +282,14 @@
                             <mask key="constraints">
                                 <exclude reference="2K0-PX-JYy"/>
                                 <exclude reference="Xpr-M6-0Mj"/>
-                                <exclude reference="8pw-jo-ecy"/>
-                                <exclude reference="SBS-w2-Qtb"/>
-                                <exclude reference="SOf-kQ-ZA1"/>
-                                <exclude reference="Unj-Qo-oxg"/>
                                 <exclude reference="01e-87-va1"/>
                                 <exclude reference="TqY-oC-fp0"/>
                                 <exclude reference="vZP-Pn-lBg"/>
                                 <exclude reference="hAz-T0-gZB"/>
+                                <exclude reference="8pw-jo-ecy"/>
+                                <exclude reference="SBS-w2-Qtb"/>
+                                <exclude reference="SOf-kQ-ZA1"/>
+                                <exclude reference="Unj-Qo-oxg"/>
                                 <exclude reference="NJI-jE-RgF"/>
                                 <exclude reference="PBF-ey-a59"/>
                                 <exclude reference="rFT-Ac-6bD"/>
@@ -304,10 +300,10 @@
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="2K0-PX-JYy"/>
-                                <include reference="8pw-jo-ecy"/>
-                                <include reference="SOf-kQ-ZA1"/>
                                 <include reference="01e-87-va1"/>
                                 <include reference="hAz-T0-gZB"/>
+                                <include reference="8pw-jo-ecy"/>
+                                <include reference="SOf-kQ-ZA1"/>
                                 <include reference="NJI-jE-RgF"/>
                                 <include reference="srR-kf-KGk"/>
                                 <include reference="vtY-Uh-tF1"/>
@@ -316,10 +312,10 @@
                         <variation key="heightClass=regular">
                             <mask key="constraints">
                                 <include reference="Xpr-M6-0Mj"/>
-                                <include reference="SBS-w2-Qtb"/>
-                                <include reference="Unj-Qo-oxg"/>
                                 <include reference="TqY-oC-fp0"/>
                                 <include reference="vZP-Pn-lBg"/>
+                                <include reference="SBS-w2-Qtb"/>
+                                <include reference="Unj-Qo-oxg"/>
                                 <include reference="PBF-ey-a59"/>
                                 <include reference="rFT-Ac-6bD"/>
                             </mask>

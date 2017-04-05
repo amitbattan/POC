@@ -44,15 +44,3 @@ class ItemCell:UITableViewCell {
         }
     }
 }
-
-class MessageCell:UITableViewCell {
-    @IBOutlet weak var msgLabel: UILabel!
-    
-    func configureCell(message:String) {
-        msgLabel.text = message
-    }
-}
-
-class LoaderCell:UITableViewCell {
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-}

@@ -44,6 +44,7 @@
 		B5BC1B811E8ACA3C00BBE2C6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5BC1B7F1E8ACA3C00BBE2C6 /* DataModel.xcdatamodeld */; };
 		B5BC1B891E8ACEDF00BBE2C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC1B881E8ACEDF00BBE2C6 /* DataManager.swift */; };
 		B5BD41501E92B48F00BA4B67 /* ListingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BD414F1E92B48F00BA4B67 /* ListingViewModelTests.swift */; };
+		B5EFC8811E94F04900942291 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC8801E94F04900942291 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		B5BC1B801E8ACA3C00BBE2C6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		B5BC1B881E8ACEDF00BBE2C6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B5BD414F1E92B48F00BA4B67 /* ListingViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewModelTests.swift; sourceTree = "<group>"; };
+		B5EFC8801E94F04900942291 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				B588C6C91E8C19D200B1D676 /* ItemCell.swift */,
+				B5EFC8801E94F04900942291 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				B588C6F71E8C236900B1D676 /* Box.swift in Sources */,
 				B55B5A751E944AD100333810 /* ThreadHelper.swift in Sources */,
 				B588C6FF1E8C236900B1D676 /* ImageTransition.swift in Sources */,
+				B5EFC8811E94F04900942291 /* MessageCell.swift in Sources */,
 				B588C7081E8C236900B1D676 /* Resource.swift in Sources */,
 				B55B5A651E9448D800333810 /* Item+CoreDataProperties.swift in Sources */,
 				B588C6FE1E8C236900B1D676 /* ImageProcessor.swift in Sources */,
@@ -591,6 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = POC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amit.POC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -603,6 +608,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = POC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amit.POC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
